@@ -1,0 +1,37 @@
+.title{
+    font-size : 50px;
+}
+
+:host {
+    display: block;
+  }
+
+  [ngClass*="hidden"] {
+    display: none !important;
+  }
+
+  [ngClass*="visible"] {
+    display: block !important;
+  }
+
+  .w-fit {
+    width: fit-content;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }

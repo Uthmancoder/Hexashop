@@ -1,0 +1,66 @@
+<div class="shadow-sm sticky top-0 h-24 bg-white z-50">
+  <div
+    class="flex items-center justify-between w-full max-w-[1100px] pt-8 h-16 px-3 mx-auto"
+  >
+    <div class="w-40">
+      <img src="assets/logo.png" alt="" />
+    </div>
+    <div class="hidden md:block">
+      <ul class="flex items-center gap-2">
+        <li class="p-4 font-medium text-sm w-full">HOME</li>
+        <li class="p-4 font-medium text-sm w-full">MEN'S</li>
+        <li class="p-4 font-medium text-sm w-full">WOMEN'S</li>
+        <li class="p-4 font-medium text-sm w-full">KID'S</li>
+        <li class="p-4 font-medium text-sm w-full">EXPLORE</li>
+      </ul>
+    </div>
+    <div class="hidden md:block">
+      <button class="border py-2 px-6 rounded-md">Login</button>
+    </div>
+    <div (click)="show()" class="block md:hidden">
+      <mat-icon
+        *ngIf="!toggle"
+        class="w-full"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        fontIcon="menu"
+      ></mat-icon>
+      
+    </div>
+  </div>
+</div>
+
+<div
+  [ngClass]="
+    toggle
+      ? 'fixed left-0 top-0 w-full h-fit bg-gray-100 ease-in-out duration-500 z-50 border-r shadow-md '
+      : 'fixed top-[-100%]'
+  "
+>
+  <div class="flex items-center justify-between gap-4 px-6">
+    <div class="w-40">
+      <img src="assets/logo.png" alt="" />
+    </div>
+    <div (click)="hide()" class=" pt-1 px-1 rounded-md hover:bg-gray-200
+     hover:text-gray-700">
+      <mat-icon
+        
+        class="w-full"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        fontIcon="close"
+      ></mat-icon>
+    </div>
+  </div>
+  <ul class="p-6 flex items-center justify-between flex-wrap text-center">
+    <li class="p-6 font-medium text-sm text-center">HOME</li>
+    <li class="p-6 font-medium text-sm text-center">MEN'S</li>
+    <li class="p-6 font-medium text-sm text-center">WOMEN'S</li>
+    <li class="p-6 font-medium text-sm text-center">KID'S</li>
+    <li class="p-6 font-medium text-sm text-center">EXPLORE</li>
+  </ul>
+  <div class="p-4 flex items-center justify-between gap-6 px-6">
+    <button class="border py-2 px-6 rounded-md  bg-slate-700 text-white">Login</button>
+    <button class="border py-2 px-6 rounded-md bg-slate-700 text-white">Sign Up</button>
+    </div>
+</div>
